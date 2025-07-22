@@ -17,6 +17,6 @@ jobs:
 
     - name: Persons Field of Interest
       run: |
-        echo "Hi ${{ github.event.input.name }}"
-        echo "Your field of interest is ${{ github.event.input.field }}"
+        echo "Hi ${{ github.event.inputs.name }}"
+        echo "Your field of interest is ${{ github.event.inputs.field }}"
    
