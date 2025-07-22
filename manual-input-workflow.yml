@@ -1,0 +1,22 @@
+name: manual-input-workflow
+
+on:
+ workflow_dispatch:
+  inputs:
+   name:
+    description: 'Please enter your name'
+    required: true
+   field: 
+    description: 'Enter your field of interest'
+    required: true
+
+jobs:
+  field:
+   runs-on: ubuntu-latest
+   steps:
+
+    - name: Persons Field of Interest
+      run: |
+      echo "Hi ${{ github.event.input.name }}"
+      echo "Your field of interest is ${{ github.event.input.field }}"
+   
